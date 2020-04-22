@@ -5,4 +5,4 @@ new Vue({
         monsterHealth: 100,
         gameIsRunning: false
     }
-})
+});
