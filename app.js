@@ -50,7 +50,9 @@ new Vue({
             this.monsterAttacks();
         },
         giveUp: function(){
+            alert("Oh no!! You gave up so Monster won!")
             this.gameIsRunning = false;
+            this.playerHealth = 0;
         },
 
         monsterAttacks: function(){
@@ -73,14 +75,16 @@ new Vue({
                     this.startNewGame();
                 } else {
                     this.gameIsRunning = false;
+                    this.monsterHealth = 0;
                 }
                 return true;
             }
             if (this.playerHealth <= 0) {
-                if (confirm("You've been killed by the Monster!\nPlay again?")) {
+                if (confirm("You lost!\nYou've been killed by the Monster!\nPlay again?")) {
                     this.startNewGame();
                 } else {
                     this.gameIsRunning = false;
+                    this.playerHealth = 0;
                 }
                 return true;
             }
