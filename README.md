@@ -1,2 +1,2 @@
 # monster-slayer-game
-Simple game for Vue basics usage
+Button-actions game using Vue.js basic interactions
